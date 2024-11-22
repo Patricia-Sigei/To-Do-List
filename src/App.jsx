@@ -1,13 +1,16 @@
 import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
 import './App.css'
-import ToDoWrapper from './components/ToDoWrapper'
+// import ToDoWrapper from './components/ToDoWrapper'
+import LogIn from './components/LogIn'
+import ToDoForm from './components/ToDoForm'
 
 function App() {
  
   return (
-   <ToDoWrapper/>
+    <div>
+      <LogIn isLoggedIn={true} username = "Patricia"/>
+   <ToDoForm/>
+   </div>
   )
 }
 
