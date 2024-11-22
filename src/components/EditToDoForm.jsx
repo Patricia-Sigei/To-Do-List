@@ -1,10 +1,15 @@
 import React from 'react'
 
-function EditToDoForm() {
+  
+  const EditToDoForm = ({task, index, handleEdit}) =>{
   return (
-    <div>
-      
-    </div>
+    <li>
+      {task}
+      <img src='/editBtn.png' alt='EditButton' onClick={() => handleEdit (index)}  
+      style={{ width: '20px', cursor: 'pointer', marginLeft: '10px' }}>
+      </img>
+
+    </li>
   )
 }
 
