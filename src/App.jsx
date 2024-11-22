@@ -8,7 +8,7 @@ function App() {
  
   return (
     <div>
-      <LogIn isLoggedIn={false} username = "Guest"/>
+      <LogIn isLoggedIn={true} username = "Patricia"/>
    <ToDoForm/>
    </div>
   )
