@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import DeleteToDo from "./DeleteToDo";
 
 function ToDoForm() {
   const [task, setTask] = useState ('');
@@ -11,6 +12,10 @@ function ToDoForm() {
     e.preventDefault ();
     task.trim()? (setList ([...list , task]), setTask ('')) : null;
   };
+  const handleDelete = (index) => {
+    const newList = list.filter((_, i) => i !== index); 
+    setList(newList);
+  };
 
   return (
     <form className='ToDoForm'>
@@ -18,7 +23,7 @@ function ToDoForm() {
         <button onClick={handleAddTask} type='submit' className='ToD0-btn'>Add Task</button>
         <ul>
         {list.map((task, index) => (
-          <li key={index}>{task}</li>
+         <DeleteToDo key={index} task={task} index={index} handleDelete={handleDelete}/>
         ))}
       </ul>
     </form>
