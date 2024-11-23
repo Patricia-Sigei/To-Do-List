@@ -1,7 +1,7 @@
 import React from 'react'
 
   
-  const EditToDoForm = ({task, index, handleEdit}) =>{
+  const EditToDoForm = ({task, index, handleEdit, handleUpdateTask}) =>{
   return (
     <li>
       {task}
