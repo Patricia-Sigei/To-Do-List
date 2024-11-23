@@ -39,11 +39,17 @@ function ToDoForm() {
         <button onClick={handleAddTask} type='submit' className='ToD0-btn'>Add Task</button>
         <ul>
         {list.map((task, index) => (
-         <DeleteToDo key={index} task={task} index={index} handleDelete={handleDelete}/>
+          <React.Fragment key={index}>  
+          <EditToDoForm
+          task={updateNewTask}
+     setUpdateNewTask={setUpdateNewTask}
+     handleUpdateTask={handleUpdateTask}/>
+         <DeleteToDo task={task} index={index} handleDelete={handleDelete}/>
+         </React.Fragment>
         ))}
       </ul>
     </form>
-  )
-}
+  );
+};
 
 export default ToDoForm
